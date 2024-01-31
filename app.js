@@ -44,7 +44,12 @@ app.use(function (req, res, next) {
     next();
 });
 app.use((0, cors_1.default)({
-    origin: "http://localhost:3000",
+    origin: [
+      "https://websocket-frontend-pi.vercel.app",
+      "https://websocket-frontend-git-main-arjhl.vercel.app",
+      "http://localhost:3000",
+      "https://websocket-frontend-o2pzah897-arjhl.vercel.app/",
+    ],
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 app.use(logger_1.logger);
